@@ -1,0 +1,20 @@
+(defun create-graph-gen(nV nE &aux V E)
+    (dotimes (i nV)
+        (setq V (nconc V (list (+ 1 i)))))
+    (dotimes (i nE)
+        (push (cons (+ 1 (random nV)) (+ 1 (random nV))) E))
+    (values V E))
+
+(defun vrtx-map(V E)
+    (let ((all-lst nil) (vrtx-lst nil) (map-lst nil))
+        (dolist (i V)
+            (dolist (j E)
+                (when (= i (car j)) (push (cdr j) map-lst)))
+            )))
+
+(defun find-chain(E)
+        (print (car i))))
+
+;(multiple-value-bind (V E) (create-graph-gen 9 15) (print V) (print E))
+;(multiple-value-bind (V E) (create-graph-gen 9 15) (find-chain E))
+(vrtx-map (create-graph-gen 5 11))
