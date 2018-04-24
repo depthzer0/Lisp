@@ -1,5 +1,3 @@
-(defun test-list()
-    (let ((lst1 (list 1 2 3))) 
-    (print lst1)))
-
-(test-list)
+(defun test(a &optional b)
+    (print a)
+    (print b))
